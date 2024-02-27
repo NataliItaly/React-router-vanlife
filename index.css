@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 70px;
+}
+
+#home {
+    padding: 40px 20px;
+    background-image: url(./assets/images/home-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home .button {
+    display: block;
+    margin: 50px auto;
+    background: #FF8C38;
+    max-width: 490px;
+    padding: 10px 50px;
+}
+
+#about {
+    color: #000;
+}
+
+#about-bg {
+    padding: 0;
+}
+
+#about-bg img {
+    width: 100%;
+    height: auto;
+}
+
+#about-text {
+    padding: 20px;
+}
+
+#about-explore {
+    background: #FFCC8D;
+    padding: 20px;
+}
+
+#about-explore h1 {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+#about-explore h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#about-explore .button {
+    display: block;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+footer {
+    display: flex;
+    background: #000;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px
+}
