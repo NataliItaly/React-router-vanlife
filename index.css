@@ -11,8 +11,12 @@ body {
 
 body {
   color: #fff;
+}
+
+#root {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
