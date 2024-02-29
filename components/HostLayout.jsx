@@ -1,29 +1,67 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 export default function HostLayout() {
+  /*  <NavLink
+              to="/host"
+              end */
+  // end is a property that is = true, helps to not match to the route path
   return (
     <>
-      <div className="host-layout">
+      <section className="host-layout">
         <ul className="host-layout-nav">
           <li>
-            <Link to="/host" className="host-layout-link">
+            <NavLink
+              to="."
+              end
+              className={({ isActive }) =>
+                isActive
+                  ? "host-layout-link host-layout-link-active"
+                  : "header-link"
+              }
+            >
               Dashboard
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/host/income" className="host-layout-link">
+            <NavLink
+              to="income"
+              className={({ isActive }) =>
+                isActive
+                  ? "host-layout-link host-layout-link-active"
+                  : "header-link"
+              }
+            >
               Income
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/host/reviews" className="host-layout-link">
+            <NavLink
+              to="vans"
+              className={({ isActive }) =>
+                isActive
+                  ? "host-layout-link host-layout-link-active"
+                  : "header-link"
+              }
+            >
+              Vans
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="reviews"
+              className={({ isActive }) =>
+                isActive
+                  ? "host-layout-link host-layout-link-active"
+                  : "header-link"
+              }
+            >
               Reviews
-            </Link>
+            </NavLink>
           </li>
         </ul>
-      </div>
+      </section>
       <Outlet />
     </>
   );

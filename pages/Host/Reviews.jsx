@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function Reviews() {
-  return <h1>Reviews</h1>;
+  return (
+    <section className="host" id="reviews">
+      <h1>Your reviews</h1>;
+    </section>
+  );
 }

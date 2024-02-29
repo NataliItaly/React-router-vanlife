@@ -8,7 +8,7 @@ export default function Vans() {
     fetch("/api/vans")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         setVans(data.vans);
       });
   }, []);
@@ -21,6 +21,7 @@ export default function Vans() {
         ? { background: "#115E59" }
         : { background: "#161616" };
     console.log(buttonStyle); */
+    console.log(van.id);
     return (
       <li className="vans-item" key={van.name}>
         <Link
@@ -48,7 +49,7 @@ export default function Vans() {
       {van}
     </li>
   ));
-  console.log(tabs);
+  //console.log(tabs);
   return (
     <section id="vans">
       <div className="vans-tabs">
