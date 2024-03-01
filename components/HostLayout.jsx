@@ -18,7 +18,7 @@ export default function HostLayout() {
               className={({ isActive }) =>
                 isActive
                   ? "host-layout-link host-layout-link-active"
-                  : "header-link"
+                  : "host-layout-link"
               }
             >
               Dashboard
@@ -30,7 +30,7 @@ export default function HostLayout() {
               className={({ isActive }) =>
                 isActive
                   ? "host-layout-link host-layout-link-active"
-                  : "header-link"
+                  : "host-layout-link"
               }
             >
               Income
@@ -42,7 +42,7 @@ export default function HostLayout() {
               className={({ isActive }) =>
                 isActive
                   ? "host-layout-link host-layout-link-active"
-                  : "header-link"
+                  : "host-layout-link"
               }
             >
               Vans
@@ -54,7 +54,7 @@ export default function HostLayout() {
               className={({ isActive }) =>
                 isActive
                   ? "host-layout-link host-layout-link-active"
-                  : "header-link"
+                  : "host-layout-link"
               }
             >
               Reviews
