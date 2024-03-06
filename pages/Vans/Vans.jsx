@@ -1,12 +1,14 @@
 import React from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import "../../server";
+//import "../../server";
 import { getVans } from "../../api";
 
 export default function Vans() {
   const [vans, setVans] = React.useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState(null);
 
   /*  fetch("/api/vans")
       .then((res) => res.json())
@@ -15,11 +17,18 @@ export default function Vans() {
       }); */
   React.useEffect(() => {
     async function loadVans() {
-      const data = await getVans();
-      console.log(data);
-      setVans(data);
+      setLoading(true);
+      try {
+        const data = await getVans();
+        //console.log(data);
+        setVans(data);
+      } catch (err) {
+        console.log(err);
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
     }
-
     loadVans();
   }, []);
 
@@ -75,6 +84,15 @@ export default function Vans() {
     );
   });
   //console.log(tabs);
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>Error: {error.message}</h1>;
+  }
+
   return (
     <section id="vans">
       <div className="vans-tabs">
